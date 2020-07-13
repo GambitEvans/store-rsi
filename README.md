@@ -1,18 +1,23 @@
-store-rsi
+# store-rsi
 
 Entre na pasta store-rsi:
 
-#Back
+# Back
+
 ´´´
-cd store-back
-npm i
-npm start 
+ cd store-back
+´´´
+´´´
+ npm i
+´´´
+´´´
+ npm start 
 ´´´
 
-Volte para a pasta store-rsi: 
+# Volte para a pasta store-rsi: 
 
-#Front
+# Front
 ´´´
-npm i 
-npm start
+ npm i 
+ npm start
 ´´´
