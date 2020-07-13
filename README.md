@@ -10,7 +10,7 @@ Entre na pasta store-rsi:
  npm start 
 ```
 
-# Volte para a pasta store-rsi: 
+Volte para a pasta store-rsi: 
 
 # Front
 ```
