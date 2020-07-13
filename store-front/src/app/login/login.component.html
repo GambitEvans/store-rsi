@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Store</h1>
+  <mat-card class="content">
+      <div class="example-container">
+          <div class="form">
+            <form [formGroup]="loginForm">
+              <mat-form-field>
+                <input matInput formControlName="userInput" placeholder="Usuário">
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput formControlName="passInput" type="password" placeholder="Senha">
+              </mat-form-field>
+              <button (click)="singIn()" mat-raised-button color="primary"
+                matBadgePosition="before" matBadgeColor="accent">
+                  Entrar
+              </button>
+            </form>
+          </div>
+          <a (click)="register()">Ainda não é cadastrado? cadastre-se aqui.</a>
+      </div>
+  </mat-card>
+</div>

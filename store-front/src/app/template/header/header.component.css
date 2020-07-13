@@ -1,0 +1,13 @@
+.custom-modalbox > mat-dialog-container { 
+    background: #535353;
+}
+
+.container span {
+    display: flex;
+}
+
+mat-toolbar-row {
+    background: #535353;
+    display: flex;
+    justify-content: space-between;
+}

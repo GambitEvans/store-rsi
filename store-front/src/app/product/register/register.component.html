@@ -1,0 +1,38 @@
+<app-header></app-header>
+
+<div class="container">
+    <mat-card class="content">
+        <div class="example-container">
+            <mat-grid-list cols="12" rowHeight="90px">
+                <div class="form">
+                    <form [formGroup]="registerForm">
+                       <mat-grid-tile colspan="10">
+                            <mat-form-field>
+                                <input matInput formControlName="inputName" placeholder="Nome">
+                            </mat-form-field>
+                       </mat-grid-tile>
+
+                       <mat-grid-tile colspan="10">
+                            <mat-form-field>
+                                <input matInput currencyMask formControlName="inputPrice"  [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" placeholder="Preço">
+                            </mat-form-field>     
+                       </mat-grid-tile>
+                       <mat-grid-tile colspan="8">
+                            <span>{{ nameFile }} </span>
+                       </mat-grid-tile>
+                       <mat-grid-tile colspan="2">
+                            <mat-icon>attach_file</mat-icon>
+                            <input class="input-file" type="file" formControlName="inputFile" (change)="file($event.target.files)" placeholder="Imagem">    
+                       </mat-grid-tile>
+                       <mat-grid-tile colspan="10">
+                         <button mat-raised-button color="primary" (click)="register()" >
+                            Cadastrar
+                         </button>
+                       </mat-grid-tile>
+                    </form>
+                </div>   
+            </mat-grid-list>
+        </div>
+    </mat-card>
+</div>
+

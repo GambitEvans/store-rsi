@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Cadastrar</h1>
+    <mat-card class="content">
+        <div class="example-container">
+            <div class="form">
+              <form [formGroup]="singupForm">
+                <mat-form-field>
+                  <input matInput formControlName="userInput" placeholder="Usuário">
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput formControlName="passInput" type="password" placeholder="Senha">
+                </mat-form-field>
+                <button (click)="singUp()" mat-raised-button color="primary"
+                  matBadgePosition="before" matBadgeColor="accent">
+                    Cadastrar
+                </button>
+              </form>
+            </div>
+        </div>
+    </mat-card>
+  </div>
