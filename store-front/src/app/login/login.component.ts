@@ -36,7 +36,9 @@ export class LoginComponent implements OnInit {
     
     this.loginService.singIn(user).subscribe((res) =>  {
       if(res.status === 200) this.router.navigate(['product', 'register']);
-      else alert('Usuário ou senha inválidos');
+      else {
+        alert('Usuário ou senha inválidos');
+      }
     });
   }
 

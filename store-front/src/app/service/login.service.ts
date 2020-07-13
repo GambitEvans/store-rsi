@@ -29,8 +29,7 @@ export class LoginService{
   singIn(user:User) {
     return this.http.post<Response>(this.api.concat(this.LOGIN), user)
       .pipe(map(res => {
-        console.log(res);
-        if(res && res.data.token) {
+        if(res.status === 200) {
           localStorage.setItem('currentUser', JSON.stringify(res));
           this.userSubject.next(res);
         }
