@@ -2,6 +2,7 @@ const userService = require('./userService');
 
 async function singIn(req, res) {
     const userData = await userService.singIn(req.body);
+    console.log('chegou no controller.');
     console.log(userData);
     if(userData) {
         return res.json({
@@ -9,7 +10,7 @@ async function singIn(req, res) {
             data: userData});
     }
     return res.json({
-        status:200, 
+        status:400, 
         mensagem: "Username or password is invalid" });
 }
 

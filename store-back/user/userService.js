@@ -4,7 +4,6 @@ const bcrypt = require('bcryptjs');
 
 async function singIn(user) {
     const returnedUser = await UserSchema.findOne({name: user.name}).select('_id name password').lean();
-    console.log(returnedUser.password);
     if (returnedUser) { 
         if(await bcrypt.compareSync(user.password, returnedUser.password)) {
             const answerUser = {
